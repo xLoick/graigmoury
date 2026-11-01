@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graig Moury — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:wght@500;700&family=Figtree:wght@400;500;800&family=JetBrains+Mono:wght@500;700&family=Syne:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=39">
+</head>
+<body data-theme="accueil">
+
+  <!-- Curseur personnalisé : un point + une forme qui le suit avec un léger retard -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span class="cursor-label"></span></div>
+
+  <header class="nav">
+    <a href="#accueil" class="nav__logo" data-cursor="Accueil">GM</a>
+    <a href="#contact" class="nav__contact" data-cursor="Contact">Contact</a>
+  </header>
+
+  <!-- Navigation par points : montre où tu es, permet d'aller à un univers -->
+  <nav class="dots" aria-label="Sections du portfolio">
+    <a href="#accueil"     data-dot="accueil"     data-cursor="Accueil"><span>Accueil</span></a>
+    <a href="#apropos"     data-dot="apropos"     data-cursor="Moi"><span>Qui suis-je ?</span></a>
+    <a href="#audiovisuel" data-dot="audiovisuel" data-cursor="Vidéo"><span>Audiovisuel</span></a>
+    <a href="#uxui"        data-dot="uxui"        data-cursor="UX/UI"><span>UX / UI</span></a>
+    <a href="#graphisme"   data-dot="graphisme"   data-cursor="Artistique"><span>Création artistique</span></a>
+    <a href="#contact"     data-dot="contact"     data-cursor="Contact"><span>Contact</span></a>
+  </nav>
+
+  <main>
+
+    <!-- ACCUEIL : le hook. Survoler un mot fait basculer tout le site dans cet univers -->
+    <section id="accueil" class="section hero" data-theme="accueil">
+      <div class="hero__top">
+        <p class="hero__eyebrow">Portfolio 2026</p>
+      </div>
+
+      <h1 class="hero__title">
+        <!-- Ce calque est copié par le JS pour chaque univers :
+             le titre change de police en fondu, sans décaler la page -->
+        <span class="title-layer" data-for="accueil">
+          <span class="mask"><span style="--i:0">Graig</span></span>
+          <span class="mask"><span style="--i:1">Moury.</span></span>
+        </span>
+      </h1>
+
+      <div class="hero__bottom">
+        <p class="hero__intro">Étudiant en 3e année de BUT MMI, parcours Stratégie de communication numérique et design d’expérience, et alternant au pôle numérique de NC la 1ère.</p>
+
+        <ul class="hero__list">
+          <li><a href="#audiovisuel" data-theme-target="audiovisuel" data-cursor-hollow>Audiovisuel</a></li>
+          <li><a href="#uxui"        data-theme-target="uxui"        data-cursor-hollow>UX / UI</a></li>
+          <li><a href="#graphisme"   data-theme-target="graphisme"   data-cursor-hollow>Création artistique</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- QUI SUIS-JE ? : présentation, expérience, formation et outils, avant de plonger dans les univers -->
+    <section id="apropos" class="section" data-theme="accueil">
+      <div class="section__inner">
+        <div class="about">
+          <div class="about__left">
+            <div class="about__card">
+              <h2>Qui suis-je ?</h2>
+              <p class="about__lead">Je m’appelle Graig, étudiant en 3e année de BUT MMI à l’IUT de la Nouvelle-Calédonie. Durant ma formation, j’ai pu apprendre l’audiovisuel, la création artistique, l’UX/UI, la communication et le développement web.</p>
+            </div>
+
+            <h3 class="about__sub">Ma formation</h3>
+            <div class="formation">
+              <div class="timeline__card">
+                <p class="timeline__meta"><span class="timeline__tag">2023 – 2026</span></p>
+                <h4>BUT MMI · IUT de la Nouvelle-Calédonie</h4>
+                <p>Parcours Stratégie de communication numérique et design d’expérience. J’y ai appris l’audiovisuel, la création artistique, l’UX/UI, la communication et le développement web.</p>
+              </div>
+              <div class="timeline__card">
+                <p class="timeline__meta"><span class="timeline__tag">2021 – 2023</span></p>
+                <h4>Baccalauréat général · Lycée Blaise Pascal</h4>
+                <p>Spécialités Numérique et Sciences de l’Informatique et Mathématiques.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about__right">
+            <h3 class="about__sub">Mon expérience</h3>
+            <ol class="timeline">
+              <li class="timeline__item is-current">
+                <div class="timeline__card">
+                  <p class="timeline__meta"><span class="timeline__tag">Alternance</span> 3e année · en cours</p>
+                  <h4>Pôle numérique de NC la 1ère</h4>
+                  <p>Création de contenus vidéo pour les réseaux sociaux : tournage et montage, déclinaison de programmes longs en formats courts. Modération des commentaires et participation à la conception de visuels.</p>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <div class="timeline__card">
+                  <p class="timeline__meta"><span class="timeline__tag">Stage</span> 2025</p>
+                  <h4>Nakupa Conseil</h4>
+                  <p>Réalisation et montage de vidéos pour les réseaux sociaux. Conception de contenus et de supports de communication pour différents clients.</p>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <div class="timeline__card">
+                  <p class="timeline__meta"><span class="timeline__tag">Stage</span> 2024</p>
+                  <h4>L’Agence A Nous</h4>
+                  <p>Création et publication de contenus pour les réseaux sociaux. Participation à la conception et au suivi de campagnes marketing saisonnières (Noël, Nouvel An), et réalisation de vidéos promotionnelles.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="stack">
+          <h3 class="about__sub">Logiciels et outils</h3>
+          <ul class="stack__pills">
+            <li>DaVinci Resolve</li>
+            <li>Premiere Pro</li>
+            <li>After Effects</li>
+            <li>CapCut</li>
+            <li>Photoshop</li>
+            <li>Illustrator</li>
+            <li>Canva</li>
+            <li>Blender</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIVERS 1 : AUDIOVISUEL — un viseur de caméra avec timecode -->
+    <section id="audiovisuel" class="section" data-theme="audiovisuel">
+      <div class="deco" aria-hidden="true">
+        <div class="av-frame">
+          <i class="av-corner av-corner--tl"></i>
+          <i class="av-corner av-corner--tr"></i>
+          <i class="av-corner av-corner--bl"></i>
+          <i class="av-corner av-corner--br"></i>
+          <span class="av-rec"><i></i>REC</span>
+          <span class="av-timecode">00:00:00:00</span>
+        </div>
+      </div>
+      <div class="section__inner">
+        <h2>Audiovisuel</h2>
+        <p class="section__skill">Concevoir, tourner et monter des vidéos adaptées à chaque réseau et à chaque public.</p>
+
+        <div class="projects">
+
+          <!-- Chaque carte = un aperçu + un titre. Le détail s'ouvre dans une fenêtre au clic.
+               - Vidéo YouTube : colle l'identifiant dans data-yt
+                 (pour https://youtu.be/AbC123xyz, écris data-yt="AbC123xyz")
+               - Lien externe : colle l'adresse dans data-href (+ data-link et data-sub pour les textes)
+               - Le contenu de la fenêtre est dans le bloc .project__detail de la carte -->
+
+          <!-- ========== PROJET : vidéo du bagne ========== -->
+          <article class="project" data-yt="lELI6x7D6GQ" data-title="Bagne de l’Île Nou : et si l’histoire se répétait ?">
+            <div class="project__thumb" aria-hidden="true"><span class="thumb-play"></span></div>
+            <div class="project__body">
+              <h3 id="p-bagne">Bagne de l’Île Nou : et si l’histoire se répétait ?</h3>
+              <p class="project__tag">Vidéo scénarisée</p>
+              <ul class="project__roles">
+                <li>Acteur</li>
+                <li>Lumière</li>
+                <li>Montage</li>
+                <li class="tool">DaVinci Resolve</li>
+                <li>Étalonnage</li>
+                <li>Sound design</li>
+              </ul>
+              <button class="project__open" type="button" aria-haspopup="dialog" aria-describedby="p-bagne" data-cursor="Voir">Voir le projet <span aria-hidden="true">+</span></button>
+            </div>
+            <div class="project__detail" hidden>
+              <p class="project__meta">Projet de 3e année de BUT MMI · en équipe de 5 · 2 minutes</p>
+              <div class="project__text">
+                <p><strong>Le projet.</strong> Dans le cadre d’un projet de ma troisième année de BUT MMI, notre équipe de cinq personnes devait produire une vidéo en lieu unique, portée par l’écriture et la mise en scène. Nous avons tourné au Site historique de l’Île Nou, et le lieu est devenu un personnage à part entière. En 2 minutes et au format horizontal, la vidéo interroge le passé du bagne pour poser une question simple : ces mécanismes ont-ils vraiment disparu ? Elle s’inspire de l’énergie de « Et tout le monde s’en fout ».</p>
+                <p><strong>Mon rôle.</strong> J’ai joué dans la vidéo, géré la lumière sur le tournage et réalisé tout le montage sur DaVinci Resolve. J’ai travaillé en particulier l’étalonnage et le sound design pour installer l’ambiance et servir le propos. Le script a été écrit par Marie-Loane Diemene.</p>
+                <p><strong>Mes compétences.</strong> Je sais tenir plusieurs postes d’une production vidéo, du jeu à la lumière puis au montage, et travailler l’image et le son pour renforcer un message. Je sais aussi m’intégrer à une équipe en prenant en charge ma part du projet.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========== PROJET : Reels du forum ========== -->
+          <article class="project" data-href="https://www.instagram.com/reel/DfDbtleTbi8/" data-link="Voir le Reel sur Instagram ↗" data-sub="Le second Reel sera bientôt disponible sur YouTube.">
+            <div class="project__thumb" aria-hidden="true"><span class="thumb-label">Reels<br>Instagram</span></div>
+            <div class="project__body">
+              <h3 id="p-reels">Forum des projets tutorés 2026</h3>
+              <p class="project__tag">Reels</p>
+              <ul class="project__roles">
+                <li>Acteur</li>
+                <li>Cadreur</li>
+                <li>Montage</li>
+                <li class="tool">CapCut</li>
+              </ul>
+              <button class="project__open" type="button" aria-haspopup="dialog" aria-describedby="p-reels" data-cursor="Voir">Voir le projet <span aria-hidden="true">+</span></button>
+            </div>
+            <div class="project__detail" hidden>
+              <p class="project__meta">Communication du Forum des projets tutorés de l’IUT · avec Prune Adam</p>
+              <div class="project__text">
+                <p><strong>Le projet.</strong> Pour faire connaître le forum et attirer du public, nous avons choisi, avec Prune Adam, de communiquer par la vidéo. Un premier Reel, dynamique et pensé pour les réseaux sociaux, présente le forum : la date, l’horaire et ce qu’il y a à y découvrir. Un second, sans voix, guide les visiteurs jusqu’au lieu grâce à un trajet filmé qui montre le chemin à suivre.</p>
+                <p><strong>Mon rôle.</strong> J’ai joué dans les vidéos, assuré le cadrage et réalisé le montage avec Prune, sur CapCut.</p>
+                <p><strong>Mes compétences.</strong> Je sais décliner un même objectif de communication en plusieurs formats : un Reel pour donner envie, un autre pour informer de façon pratique. Je pense chaque vidéo en fonction de son rôle et de la plateforme où elle sera publiée.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========== PROJET : webdocumentaire ==========
+               Le film n'est pas encore en ligne : la fenêtre renvoie vers l'article de NC la 1ère. -->
+          <article class="project" data-href="https://la1ere.franceinfo.fr/nouvellecaledonie/derriere-la-gomme-de-prune-adam-remporte-le-1er-prix-de-la-6e-edition-du-concours-webdoc-unc-nc-la-1ere-1723159.html" data-link="Lire l’article de NC la 1ère ↗" data-sub="Le film n’est pas encore disponible en ligne.">
+            <div class="project__thumb" aria-hidden="true"><span class="thumb-label">Webdoc</span></div>
+            <div class="project__body">
+              <h3 id="p-webdoc">De l’ombre à la lumière</h3>
+              <p class="project__tag">Webdocumentaire</p>
+              <ul class="project__roles">
+                <li>Cadreur</li>
+                <li>Montage</li>
+                <li class="tool">Premiere Pro</li>
+              </ul>
+              <p class="project__award">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6.5"/><path d="M12 5.6l1.1 2.3 2.5.3-1.8 1.7.5 2.5-2.3-1.2-2.3 1.2.5-2.5-1.8-1.7 2.5-.3z"/><path d="M8.2 14.2L6.5 22l5.5-2.8 5.5 2.8-1.7-7.8"/></svg>
+                <span><strong>Prix d’encouragement du jury</strong><em>Webdoc UNC × NC la 1ère · 6e édition</em></span>
+              </p>
+              <button class="project__open" type="button" aria-haspopup="dialog" aria-describedby="p-webdoc" data-cursor="Voir">Voir le projet <span aria-hidden="true">+</span></button>
+            </div>
+            <div class="project__detail" hidden>
+              <p class="project__meta">Concours Webdoc UNC × NC la 1ère, cours d’Audiovisuel · avec Marie-Loane Diemene</p>
+              <div class="project__text">
+                <p><strong>Le projet.</strong> Dans le cadre du cours d’Audiovisuel, ma promotion de BUT MMI a participé à ce concours sur le thème des figures inspirantes calédoniennes et de la transmission. Avec Marie-Loane Diemene, nous avons imaginé, écrit et réalisé le portrait de Périette Waloua, maraîchère calédonienne, dont le parcours de résilience passe par l’entrepreneuriat et l’aide aux enfants vulnérables.</p>
+                <p><strong>Mon rôle.</strong> J’ai assuré le cadrage et le montage sur Premiere Pro, en binôme avec Marie-Loane, avec qui j’ai co-monté le film.</p>
+                <p><strong>Mes compétences.</strong> Je sais mener un projet documentaire de bout en bout, de l’idée à la postproduction, et le résultat a été reconnu : notre film fait partie des cinq récompensés parmi les dix présentés au jury, composé de professionnels de NC la 1ère, de la responsable du BUT MMI et d’un réalisateur.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========== CV VIDÉO ========== -->
+          <article class="project" data-yt="MncsOFwpJOc" data-title="CV vidéo de Graig Moury">
+            <div class="project__thumb" aria-hidden="true"><span class="thumb-play"></span></div>
+            <div class="project__body">
+              <h3 id="p-cv">CV vidéo</h3>
+              <p class="project__tag">Présentation personnelle</p>
+              <ul class="project__roles">
+                <li>Écriture</li>
+                <li>Face caméra</li>
+                <li>Montage</li>
+                <li class="tool">DaVinci Resolve</li>
+              </ul>
+              <button class="project__open" type="button" aria-haspopup="dialog" aria-describedby="p-cv" data-cursor="Voir">Voir le projet <span aria-hidden="true">+</span></button>
+            </div>
+            <div class="project__detail" hidden>
+              <p class="project__meta">Cours de Projet Personnel et Professionnel · filmé par Marie-Loane Diemene et Prune Adam</p>
+              <div class="project__text">
+                <p><strong>Le projet.</strong> Dans le cadre du cours de Projet Personnel et Professionnel, nous devions réaliser un CV vidéo, dans le format de notre choix. J’ai voulu une vidéo belle, qui attire l’œil, et qui reprend les codes des réseaux sociaux pour garder l’attention du début à la fin. Elle présente mes compétences et mes passions.</p>
+                <p><strong>Mon rôle.</strong> J’ai écrit le texte, je suis passé devant la caméra et j’ai réalisé tout le montage sur DaVinci Resolve. Marie-Loane et Prune m’ont filmé.</p>
+                <p><strong>Mes compétences.</strong> Je sais adapter une vidéo à son objectif et à son public : ici, me présenter à des recruteurs tout en gardant l’énergie des formats pensés pour les réseaux sociaux.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIVERS 2 : UX / UI — des fragments d'interface qui réagissent à la souris -->
+    <section id="uxui" class="section" data-theme="uxui">
+      <div class="deco" aria-hidden="true">
+        <div class="ux-grid"></div>
+        <div class="ux-card ux-card--a" style="--p:22">
+          <i class="ux-avatar"></i>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="ux-card ux-card--b" style="--p:-30">
+          <div class="ux-bars">
+            <b style="--h:40%"></b><b style="--h:70%"></b><b style="--h:55%"></b><b style="--h:90%"></b>
+          </div>
+        </div>
+        <div class="ux-pill" style="--p:40">Commencer</div>
+        <div class="ux-toggle" style="--p:-18"><i></i></div>
+      </div>
+      <div class="section__inner">
+        <h2>UX / UI</h2>
+        <p class="section__skill">Concevoir des parcours et des interfaces claires, du besoin jusqu’à la maquette.</p>
+
+        <div class="projects">
+
+          <!-- ========== PROJET : Symbiosys ========== -->
+          <article class="project" data-img="img/symbiosys-pitch-1.jpg" data-gallery="img/symbiosys-pitch-1.jpg,img/symbiosys-etape-1.jpg,img/symbiosys-etape-2.jpg,img/symbiosys-final.jpg,img/symbiosys-depliant-1.jpg,img/symbiosys-depliant-2.jpg" data-title="Symbiosys : un parcours interactif sur les fresques de l’UNC">
+            <div class="project__thumb" aria-hidden="true"></div>
+            <div class="project__body">
+              <h3 id="p-symbiosys">Symbiosys : un parcours interactif sur les fresques de l’UNC</h3>
+              <p class="project__tag">Parcours interactif</p>
+              <ul class="project__roles">
+                <li>Parcours utilisateur</li>
+                <li>Pitch</li>
+                <li>Dépliant</li>
+                <li>QR codes</li>
+              </ul>
+              <button class="project__open" type="button" aria-haspopup="dialog" aria-describedby="p-symbiosys" data-cursor="Voir">Voir le projet <span aria-hidden="true">+</span></button>
+            </div>
+            <div class="project__detail" hidden>
+              <p class="project__meta">Projet de 3e année de BUT MMI · Festival Kaléidoscope, Micro-mondes · avec Marie-Loane Diemene · 2026</p>
+              <div class="project__text">
+                <p><strong>Le projet.</strong> À l’occasion du Festival Kaléidoscope, l’artiste Kuby Kolor a peint des fresques sur le campus de l’UNC, chacune associant une espèce calédonienne à sa molécule. Une fois peintes, elles restent figées et les étudiants passent devant sans s’y arrêter. Nous avons imaginé Symbiosys (symbiose + système) : un parcours en cinq étapes, de la tortue marine à l’hibiscus, qui relie les fresques entre elles comme les espèces sont reliées dans la nature. Le visiteur scanne un QR code près de chaque fresque, découvre l’espèce, sa molécule en 3D, teste ses connaissances avec un quiz, puis suit le guide jusqu’à la fresque suivante. Nous avons aussi proposé deux nouvelles fresques, le requin léopard et le palétuvier.</p>
+                <p><strong>Mon rôle.</strong> Avec Marie-Loane Diemene, j’ai conçu le parcours et l’expérience du visiteur, de la découverte de la fresque jusqu’au final où toutes les espèces se retrouvent dans un même paysage. J’ai réalisé le pitch présenté à l’oral, les QR codes de chaque fresque et le dépliant trois volets distribué lors de la visite test.</p>
+                <p><strong>Mes compétences.</strong> Je sais concevoir un parcours utilisateur de bout en bout, le rendre clair et attrayant pour un public étudiant, et le présenter avec des supports adaptés : pitch, dépliant et signalétique.</p>
+                <p class="project__links"><a class="pill pill--small" href="docs/pitch-symbiosys.pdf" download data-cursor-hollow>Télécharger le pitch (PDF) <span aria-hidden="true">↓</span></a> <a class="pill pill--small" href="docs/depliant-symbiosys.pdf" download data-cursor-hollow>Télécharger le dépliant (PDF) <span aria-hidden="true">↓</span></a></p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========== PROJET : application Forçats’Nou ========== -->
+          <article class="project" data-img="img/kaval-parcours.jpg" data-gallery="img/kaval-parcours.jpg,img/kaval-matricule.jpg" data-title="Forçats’Nou : application de visite de l’Île Nou">
+            <div class="project__thumb" aria-hidden="true"></div>
+            <div class="project__body">
+              <h3 id="p-app">Forçats’Nou : application de visite de l’Île Nou</h3>
+              <p class="project__tag">Application mobile</p>
+              <ul class="project__roles">
+                <li>Maquettes</li>
+                <li>Interface</li>
+                <li>Parcours de visite</li>
+                <li class="tool">Figma</li>
+              </ul>
+              <button class="project__open" type="button" aria-haspopup="dialog" aria-describedby="p-app" data-cursor="Voir">Voir le projet <span aria-hidden="true">+</span></button>
+            </div>
+            <div class="project__detail" hidden>
+              <p class="project__meta">Projet de 3e année de BUT MMI · Site historique de l’Île Nou · présenté au forum</p>
+              <div class="project__text">
+                <p><strong>Le projet.</strong> Forçats’Nou est une application que nous avons imaginée pour faire découvrir le Site historique de l’Île Nou. Elle propose un parcours de visite sur carte, avec un journal de bord où le visiteur valide chaque étape, ainsi que des avis et des favoris sur les lieux. Un mini-jeu, « Matricule », fait entrer dans l’histoire du bagne : le joueur lit le dossier d’un condamné et choisit le tampon qui correspond à son sort.</p>
+                <p><strong>Mon rôle.</strong> J’ai conçu des écrans de l’application sur Figma, de la maquette en niveaux de gris du parcours jusqu’à l’interface finale avec carte, fiches de lieux et mini-jeu.</p>
+                <p><strong>Mes compétences.</strong> Je sais passer d’une idée à une maquette d’application complète et lisible : structurer les écrans, soigner l’interface et rendre l’histoire d’un lieu ludique.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========== PROJET : jeux du stand ========== -->
+          <article class="project" data-img="img/jeu-inventaire-1.jpg" data-gallery="img/jeu-inventaire-1.jpg,img/jeu-inventaire-2.jpg,img/jeu-pleincadre-1.jpg,img/jeu-pleincadre-2.jpg,img/jeu-boutabout-1.jpg,img/jeu-boutabout-2.jpg" data-title="Jeux pour le FORUM des projets tutorés : Inventaire, Plein cadre et Bout à bout">
+            <div class="project__thumb" aria-hidden="true"></div>
+            <div class="project__body">
+              <h3 id="p-jeux">Jeux pour le FORUM des projets tutorés</h3>
+              <p class="project__tag">Jeux interactifs</p>
+              <ul class="project__roles">
+                <li>Conception des jeux</li>
+                <li>Interface</li>
+                <li class="tool">Figma</li>
+              </ul>
+              <button class="project__open" type="button" aria-haspopup="dialog" aria-describedby="p-jeux" data-cursor="Voir">Voir le projet <span aria-hidden="true">+</span></button>
+            </div>
+            <div class="project__detail" hidden>
+              <p class="project__meta">Projet de 3e année de BUT MMI · Site historique de l’Île Nou · Forum des projets tutorés</p>
+              <div class="project__text">
+                <p><strong>Le projet.</strong> Pour animer notre stand au forum, nous avons conçu trois jeux courts qui font découvrir l’histoire du bagne de l’Île Nou. Dans « Inventaire », le joueur glisse chaque objet (une carotte, une brique, un boulet…) dans la caisse du lieu où il était fabriqué. Dans « Plein cadre », il doit reconnaître un objet à partir d’un détail zoomé, en trois essais maximum. Dans « Bout à bout », quatre images mènent à un seul mot à retrouver. Tous les jeux partagent la même ambiance de parchemin et affichent un score.</p>
+                <p><strong>Mon rôle.</strong> J’ai conçu ces jeux et leurs écrans : règles, interface, parcours du joueur et univers visuel.</p>
+                <p><strong>Mes compétences.</strong> Je sais concevoir une interaction courte et lisible pour un public de passage, avec des consignes claires, un retour immédiat et une identité visuelle cohérente.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIVERS 4 : CRÉATION GRAPHIQUE — des formes organiques qui bougent doucement.
+         Section plus légère : si tu manques de matière, supprime ce bloc, son point dans
+         la navigation et son lien sur l'accueil (ou fusionne-la avec Audiovisuel). -->
+    <section id="graphisme" class="section" data-theme="graphisme">
+      <div class="deco" aria-hidden="true">
+        <i class="gr-blob gr-blob--a" style="--p:-40"></i>
+        <i class="gr-blob gr-blob--b" style="--p:55"></i>
+        <i class="gr-blob gr-blob--c" style="--p:25"></i>
+        <i class="gr-ring"></i>
+      </div>
+      <div class="section__inner">
+        <h2>Création artistique</h2>
+        <p class="section__skill">Imaginer et réaliser des visuels et des univers, du graphisme à la 3D.</p>
+
+        <div class="projects">
+
+          <!-- ========== PROJET : affiche contre le sexisme ========== -->
+          <article class="project" data-img="img/affiche-sexisme.jpg" data-gallery="img/affiche-sexisme.jpg" data-title="Affiche Show sexiste UNC 2026">
+            <div class="project__thumb" aria-hidden="true"></div>
+            <div class="project__body">
+              <h3 id="p-affiche">Affiche Show sexiste UNC 2026</h3>
+              <p class="project__tag">Affiche</p>
+              <ul class="project__roles">
+                <li>Création graphique</li>
+                <li>Typographie</li>
+                <li>Mise en page</li>
+                <li class="tool">Canva</li>
+              </ul>
+              <p class="project__award">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6.5"/><path d="M12 5.6l1.1 2.3 2.5.3-1.8 1.7.5 2.5-2.3-1.2-2.3 1.2.5-2.5-1.8-1.7 2.5-.3z"/><path d="M8.2 14.2L6.5 22l5.5-2.8 5.5 2.8-1.7-7.8"/></svg>
+                <span><strong>3e place</strong><em>Show sexiste UNC 2026 · catégorie création graphique</em></span>
+              </p>
+              <button class="project__open" type="button" aria-haspopup="dialog" aria-describedby="p-affiche" data-cursor="Voir">Voir le projet <span aria-hidden="true">+</span></button>
+            </div>
+            <div class="project__detail" hidden>
+              <p class="project__meta">Projet de cours · Show sexiste UNC 2026, catégorie création graphique</p>
+              <div class="project__text">
+                <p><strong>Le projet.</strong> Dans le cadre d’un cours, j’ai créé une affiche pour dénoncer les préjugés sur les femmes dans notre société. Une silhouette en contre-jour se détache d’un fond de mots-clichés en lettrage manuscrit rose, comme « soumise », « manipulatrice » ou « incompétente » : ces étiquettes l’enferment et la recouvrent. L’affiche a obtenu la 3e place du concours, dans la catégorie création graphique.</p>
+                <p><strong>Mon rôle.</strong> J’ai conçu l’affiche : l’idée, la composition, le choix des mots et le travail typographique.</p>
+                <p><strong>Mes compétences.</strong> Je sais transformer un message fort en une image simple et percutante, en jouant sur le contraste, la couleur et la typographie.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- ========== PROJET : scène 3D Blender ========== -->
+          <article class="project" data-yt="pW3MsVePVGI" data-img="img/blender-scene.jpg" data-gallery="img/blender-scene.jpg,img/blender-ananas.jpg,img/blender-calamar.jpg,img/blender-dome.jpg,img/blender-voiture-1.jpg,img/blender-voiture-2.jpg" data-title="Scène 3D Blender Bob l’Éponge, modélisé sur Blender">
+            <div class="project__thumb" aria-hidden="true"><span class="thumb-play"></span></div>
+            <div class="project__body">
+              <h3 id="p-blender">Scène 3D Blender Bob l’Éponge</h3>
+              <p class="project__tag">Modélisation 3D</p>
+              <ul class="project__roles">
+                <li>Modélisation</li>
+                <li>Matériaux</li>
+                <li>Mise en scène</li>
+                <li class="tool">Blender</li>
+              </ul>
+              <button class="project__open" type="button" aria-haspopup="dialog" aria-describedby="p-blender" data-cursor="Voir">Voir le projet <span aria-hidden="true">+</span></button>
+            </div>
+            <div class="project__detail" hidden>
+              <p class="project__meta">Cours de Création artistique · BUT MMI · modélisation 3D</p>
+              <div class="project__text">
+                <p><strong>Le projet.</strong> Dans le cadre d’un cours de création artistique, j’ai réalisé sur Blender une scène 3D : un petit quartier inspiré de Bob l’Éponge, avec une BMW E30 et un bateau. On y trouve aussi une maison en forme d’ananas, une maison en forme de tête de statue, un dôme, une boîte aux lettres, de la végétation et un sol de sable, le tout en style cartoon.</p>
+                <p><strong>Mon rôle.</strong> J’ai modélisé les éléments un par un, créé leurs matériaux et leurs couleurs, puis composé la scène pour qu’elle se lise d’un coup d’œil.</p>
+                <p><strong>Mes compétences.</strong> Je sais modéliser des objets et des décors en 3D, travailler les formes, les matériaux et les couleurs, et assembler le tout dans une scène cohérente.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" data-theme="accueil">
+      <div class="section__inner contact">
+        <div class="contact__info">
+          <h2>Contact</h2>
+          <p class="section__skill">Une question, une opportunité ? N’hésitez pas à m’écrire.</p>
+          <ul class="contact__list">
+            <li><span>Téléphone</span><a href="tel:+687893471" data-cursor-hollow>(+687) 89.34.71</a></li>
+            <li><span>Mail</span><a href="mailto:graig.moury@gmail.com" data-cursor-hollow>graig.moury@gmail.com</a></li>
+            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/graig-moury-b8402031b/" target="_blank" rel="noopener" data-cursor-hollow>Graig Moury ↗</a></li>
+          </ul>
+        </div>
+        <form class="contact__form" id="contact-form" action="mailto:graig.moury@gmail.com" method="post" enctype="text/plain">
+          <label>Nom<input type="text" name="nom" placeholder="Votre nom" required></label>
+          <label>Email<input type="email" name="email" placeholder="votre@email.com" required></label>
+          <label>Message<textarea name="message" rows="5" placeholder="Votre message…" required></textarea></label>
+          <button class="pill" type="submit" data-cursor-hollow>Envoyer <span aria-hidden="true">↗</span></button>
+        </form>
+      </div>
+      <footer class="footer">
+        <span>© 2026 Graig Moury</span>
+        <a class="pill pill--small" href="#accueil" data-cursor-hollow>Retour en haut <span aria-hidden="true">↑</span></a>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Fenêtre de détail d'un projet (remplie par js/main.js au clic sur une carte) -->
+  <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__scrim" data-close></div>
+    <div class="modal__panel" tabindex="-1">
+      <div class="modal__bar">
+        <span class="modal__label"></span>
+        <button class="modal__close" type="button" data-cursor-hollow>Fermer <span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal__media"></div>
+      <div class="modal__body"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=39"></script>
+</body>
+</html>
